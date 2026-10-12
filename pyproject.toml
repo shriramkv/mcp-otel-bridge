@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-otel-bridge"
+version = "0.1.0"
+description = "Turn MCP sessions, goose sessions and guardrail audit logs into OpenTelemetry traces"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shriram K Vasudevan" }]
+requires-python = ">=3.9"
+keywords = ["mcp", "opentelemetry", "otlp", "goose", "observability", "aaif"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: System :: Monitoring",
+]
+
+[project.urls]
+Homepage = "https://github.com/shriramkv/mcp-otel-bridge"
+
+[project.scripts]
+mcp-otel-bridge = "mcp_otel_bridge.cli:main"
+
+[tool.setuptools]
+packages = ["mcp_otel_bridge"]
